@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled PHP Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="form-container">
+    
+    <form method="POST" action="submit.php">
+        Name: <input type="text" name="name" required>
+        Email: <input type="email" name="email" required>
+        <input type="submit" value="Submit">
+    </form>
+    
+    <button id="toggleButton">Display Data</button>
+
+    <div id="userData" style="display:none;">
+        <?php include 'submit.php'; ?>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
